@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card"
 import Link from "next/link"
 
+// projects
 const projects = [
   {
     title: "Dailify App",
