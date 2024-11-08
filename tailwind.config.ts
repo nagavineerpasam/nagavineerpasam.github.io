@@ -60,6 +60,15 @@ const config: Config = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+        blue: {
+          500: '#3B82F6',  // Adjust these hex values to match exactly
+        },
+        indigo: {
+          500: '#6366F1',
+        },
+        purple: {
+          500: '#8B5CF6',
+        },
       },
       keyframes: {
         'accordion-down': {

@@ -47,7 +47,7 @@ export function Skills() {
       <h2 className="text-3xl font-bold tracking-tight mb-8">Skills</h2>
       <div className="grid gap-6 md:grid-cols-3">
         {Object.entries(skills).map(([category, items]) => (
-          <Card key={category} className="rounded-lg border bg-card p-4 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg dark:bg-zinc-900 dark:hover:bg-zinc-800/90 dark:border-zinc-800">
+          <Card key={category} className="rounded-lg border bg-card p-4 transition-all hover:scale-[1.01] hover:shadow-lg dark:bg-zinc-900 dark:hover:bg-zinc-800/90 dark:border-zinc-800">
             <CardHeader>
               <CardTitle>{category}</CardTitle>
               <CardDescription>
@@ -72,7 +72,7 @@ export function Skills() {
       </div>
       <div className="mt-12">
         <h3 className="text-2xl font-bold tracking-tight mb-6">Achievements</h3>
-        <Card className="rounded-lg border bg-card p-4 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg dark:bg-zinc-900 dark:hover:bg-zinc-800/90 dark:border-zinc-800">
+        <Card className="rounded-lg border bg-card p-4 transition-all hover:scale-[1.01] hover:shadow-lg dark:bg-zinc-900 dark:hover:bg-zinc-800/90 dark:border-zinc-800">
           <CardContent className="pt-6">
             <ul className="list-disc list-inside space-y-2 text-muted-foreground">
               {achievements.map((achievement, index) => (

@@ -43,7 +43,7 @@ export function Projects() {
       <h2 className="text-3xl font-bold tracking-tight mb-8">Projects</h2>
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (
-          <Card key={project.title} className="rounded-lg border bg-card p-4 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg dark:bg-zinc-900 dark:hover:bg-zinc-800/90 dark:border-zinc-800">
+          <Card key={project.title} className="rounded-lg border bg-card p-4 transition-all hover:scale-[1.01] hover:shadow-lg dark:bg-zinc-900 dark:hover:bg-zinc-800/90 dark:border-zinc-800">
             <CardHeader>
               <CardTitle>{project.title}</CardTitle>
               <CardDescription>{project.description}</CardDescription>

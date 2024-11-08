@@ -55,7 +55,7 @@ export function Experience() {
       <h2 className="text-3xl font-bold tracking-tight mb-8">Experience</h2>
       <div className="space-y-6">
         {experience.map((job) => (
-          <Card key={job.company} className="rounded-lg border bg-card p-4 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg dark:bg-zinc-900 dark:hover:bg-zinc-800/90 dark:border-zinc-800">
+          <Card key={job.company} className="rounded-lg border bg-card p-4 transition-all hover:scale-[1.01] hover:shadow-lg dark:bg-zinc-900 dark:hover:bg-zinc-800/90 dark:border-zinc-800">
             <CardHeader>
               <div className="flex justify-between items-start">
                 <div>
