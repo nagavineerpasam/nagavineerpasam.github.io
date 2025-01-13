@@ -1,5 +1,6 @@
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import {
   Card,
   CardContent,
@@ -9,70 +10,70 @@ import {
 } from "@/components/ui/card"
 import Link from "next/link"
 
-// projects
 const projects = [
   {
-    title: "Dailify App",
-    description: "A daily logger app for tracking activities and habits",
-    technologies: ["React Native", "Expo", "Supabase"],
-    github: "",
+    title: "UnderlayX",
+    tagline: "Your all-in-one tool to transform images like never before",
+    description: "UnderlayX is a revolutionary image editing platform designed to bring your creative visions to life. From customizing backgrounds to creating unique effects with text and shapes, it combines multiple powerful features into a seamless, privacy-focused experience.",
+    features: [
+      "Clone Objects: Easily duplicate elements within an image",
+      "Remove Backgrounds: Instantly isolate subjects",
+      "Change and Customize Backgrounds: Transform with new designs",
+      "Add Text Behind Subjects: Create stunning layered effects",
+      "Privacy-Focused: All processing happens on the client side"
+    ],
+    website: "https://www.underlayx.com",
+    image: "/underlayx.png"
   },
   {
-    title: "Expense Tracker",
-    description: "Web app to track and manage personal expenses",
-    technologies: ["ReactJS", "Firebase"],
-    github: "https://github.com/nagavineerpasam/expense-tracker",
-  },
-  {
-    title: "Real Estate App",
-    description: "Mobile app for browsing apartments with wishlist functionality",
-    technologies: ["React Native", "Firebase"],
-    github: "https://github.com/nagavineerpasam/react-native-realestate-app",
-  },
-  {
-    title: "Movie Search App",
-    description: "Browse movies, read summaries, and view ratings",
-    technologies: ["ReactJS", "TMDB API"],
-    github: "https://github.com/nagavineerpasam/moviesearchApp",
+    title: "VC Maker",
+    tagline: "Transform plain images into captivating song covers",
+    description: "VC Maker is a versatile design tool that enables users to transform ordinary images into visually striking song covers. With features like customizable overlays, music controls, titles, artist names, progress bars, and optional filter effects, it offers flexibility for various creative needs.",
+    features: [
+      "Add music controls and progress bars for a professional look",
+      "Customize titles, captions, and artist names",
+      "Apply optional filter effects for enhanced visuals",
+      "Toggle overlays to create both minimalist and detailed designs",
+      "Perfect for song covers or general image design purposes"
+    ],
+    website: "https://visualcovermaker.com/",
+    image: "/vcmaker.png"
   },
 ]
 
 export function Projects() {
   return (
-    <section id="projects" className="py-16 sm:py-24">
-      <h2 className="text-3xl font-bold tracking-tight mb-8">Projects</h2>
-      <div className="grid gap-6 md:grid-cols-2">
+    <section id="projects" className="py-12">
+      <h2 className="text-3xl font-bold tracking-tight mb-6">Projects</h2>
+      <div className="space-y-8">
         {projects.map((project) => (
-          <Card key={project.title} className="rounded-lg border bg-card p-4 transition-all hover:scale-[1.01] hover:shadow-lg dark:bg-zinc-900 dark:hover:bg-zinc-800/90 dark:border-zinc-800">
-            <CardHeader>
-              <CardTitle>{project.title}</CardTitle>
-              <CardDescription>{project.description}</CardDescription>
+          <Card key={project.title} className="overflow-hidden">
+            <CardHeader className="pb-4">
+              <CardTitle className="text-2xl">{project.title}</CardTitle>
+              <CardDescription className="text-lg">{project.tagline}</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-sm"
-                  >
-                    {tech}
-                  </span>
+              <p className="mb-4 text-muted-foreground">{project.description}</p>
+              <ul className="list-disc list-inside mb-6 space-y-2 text-muted-foreground">
+                {project.features.map((feature, index) => (
+                  <li key={index}>{feature}</li>
                 ))}
-              </div>
-              <div className="flex gap-4">
-                <Button variant="outline" size="sm" asChild>  
-                  {project.github && 
-                  <Link href={project.github} target="_blank">
-                    <Github className="mr-2 h-4 w-4" />
-                    Code
-                  </Link>}
-                </Button>
-                {/* <Button variant="outline" size="sm" asChild>
-                  <Link href={project.demo} target="_blank">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Demo
-                  </Link>
-                </Button> */}
+              </ul>
+              <Button variant="outline" size="sm" asChild className="mb-6">
+                <Link href={project.website} target="_blank">
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  Visit Website
+                </Link>
+              </Button>
+              <div className="relative w-full">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={1200}
+                  height={675}
+                  className="rounded-lg w-full"
+                  style={{ height: 'auto' }}
+                />
               </div>
             </CardContent>
           </Card>

@@ -70,18 +70,6 @@ export function Skills() {
           
         ))}
       </div>
-      <div className="mt-12">
-        <h3 className="text-2xl font-bold tracking-tight mb-6">Achievements</h3>
-        <Card className="rounded-lg border bg-card p-4 transition-all hover:scale-[1.01] hover:shadow-lg dark:bg-zinc-900 dark:hover:bg-zinc-800/90 dark:border-zinc-800">
-          <CardContent className="pt-6">
-            <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-              {achievements.map((achievement, index) => (
-                <li key={index}>{achievement}</li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-      </div>
     </section>
   )
 }
